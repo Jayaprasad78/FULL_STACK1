@@ -6,5 +6,5 @@ mongoose.connect(db,{  writeConcern: { w: 'majority' }}).then(()=>{
     console.log('error connecting to database');
     console.log(err.message);
 })
+//console.log
 
-//hi

@@ -365,7 +365,7 @@ router.post('/send-reset-email', async (req, res) => {
     from: 'jayaprasadb170@gmail.com',
     to: email,
     subject: 'Password Reset',
-    text: `Click the following link to reset your password: file:///G:/learning_code/full_stack/client/src/reset.html`,
+    text: `Click the following link to reset your password: https://reset-password3-frontend.vercel.app/`,
 
   };
 
