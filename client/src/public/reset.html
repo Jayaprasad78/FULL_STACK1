@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Change Form</title>
+</head>
+<body>
+    <h2>Password Change</h2>
+    <form id="passwordChangeForm">
+        <div>
+            <label for="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                required
+            />
+        </div>
+        <div>
+            <label for="newPassword">New Password:</label>
+            <input
+                type="password"
+                id="newPassword"
+                required
+            />
+        </div>
+        <button type="submit">Change Password</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("passwordChangeForm");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const email = document.getElementById("email").value;
+                const newPassword = document.getElementById("newPassword").value;
+
+                // Send a POST request to the backend using the Fetch API
+                fetch("http://localhost:3000/change-password", { // Replace with your backend URL
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ email, newPassword }),
+                })
+                .then((response) => {
+                    if (response.status === 200) {
+                        return response.json();
+                    } else {
+                        throw new Error("Password change failed");
+                    }
+                })
+                .then((data) => {
+                    console.log(data.message);
+                    // You can perform further actions here upon success
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                    // Handle errors here
+                });
+            });
+        });
+    </script>
+</body>
+</html>

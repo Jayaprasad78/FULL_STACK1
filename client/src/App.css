@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+.Home {
+    margin: 0; /* Remove default margin */
+  padding: 0;
+    background-image: url('../src/assets/images/back.gif'); /* Replace with your background image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional - prevents background scrolling */
+    background-position: center center;
+    height: 100vh; /* Make sure the container covers the entire viewport */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .home-content {
+    margin: 0; /* Remove default margin */
+  padding: 0;
+    color: red;
+    font-size: 60px;
+    word-spacing: 15px;
+  }
+  
+  .user-name {
+    color: chartreuse;
+  }
+  
