@@ -66,9 +66,12 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit">Signin</button>
-        <Link className="nav-link" to="/forgot-pass"/>
-          Forgot Password
+       <div>
+      <button type="submit">Signin</button>
+      <Link className="nav-link" to="/forgot-pass">
+        Forgot Password
+      </Link>
+    </div>
       </form>
     </div>
   );
