@@ -17,10 +17,10 @@ const Logout = () => {
          
           window.alert('Logged out successfully');
           navigate('/login'); // Redirect to the login page after logout
-        } else {
-          console.error('Logout failed');
-          window.alert('Logout failed');
-          // Handle logout failure (e.g., display an error message)
+        }
+         else
+          {
+             window.alert('Logout failed');
         }
       } catch (error) {
         console.error('Error during logout:', error);

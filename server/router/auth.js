@@ -36,19 +36,18 @@ router.post('/signup',  handleImageUpload,  async (req, res) => {
     const { name, email, phone, work, password, cpassword } = req.body;
 
     // Check if all required fields are provided
-    if (!name || !email || !phone || !work || !password || !cpassword) {
+    if (!name || !email || !phone || !work || !password || !cpassword)
+    {
       return res.status(400).json({ message: 'Please fill in all the fields' });
     }
-
-    // Check if passwords match
-    if (password !== cpassword) {
-      return res.status(400).json({ message: 'Passwords do not match' });
-    }
-
-    // Check if the email is already in use
+    //email exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(400).json({ message: 'Email is already registered' });
+      return res.status(401).json({ message: 'Email is already registered' });
+    }
+    // Check if passwords match
+    if (password !== cpassword) {
+      return res.status(402).json({ message: 'Passwords do not match' });
     }
 
     // Create a new user without hashing the password

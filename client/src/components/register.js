@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate,Link } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -41,13 +41,26 @@ const Signin = () => {
       });
 
       if (response.status === 201) {
-        console.log('Successfully Registered');
+       
         window.alert('Successfully Registered');
         navigate('/login');
         // Redirect the user to the dashboard or another protected route
-      } else {
-        console.error('Signin failed');
-        window.alert('failed');
+      }
+      else if(response.status === 400)
+      {
+        window.alert('fill all the feild ');
+      }
+      else if(response.status === 401)
+      {
+        window.alert('email already registered');
+      }
+      else if(response.status ===402)
+      {
+        window.alert('password is not matching');
+      }
+      else
+       {
+         window.alert('failed');
         // Display an error message to the user
       }
     } catch (error) {
