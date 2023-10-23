@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import '../assets/styles/register.css';
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -41,26 +42,13 @@ const Signin = () => {
       });
 
       if (response.status === 201) {
-       
+        console.log('Successfully Registered');
         window.alert('Successfully Registered');
         navigate('/login');
         // Redirect the user to the dashboard or another protected route
-      }
-      else if(response.status === 400)
-      {
-        window.alert('fill all the feild ');
-      }
-      else if(response.status === 401)
-      {
-        window.alert('email already registered');
-      }
-      else if(response.status ===402)
-      {
-        window.alert('password is not matching');
-      }
-      else
-       {
-         window.alert('failed');
+      } else {
+        console.error('Signin failed');
+        window.alert('failed');
         // Display an error message to the user
       }
     } catch (error) {
@@ -69,10 +57,14 @@ const Signin = () => {
   };
 
   return (
-    <div>
+    <div className='body-container'>
+   
+       
+    <div className='signup-container'> 
+   
+      <form onSubmit={handleSubmit} encType="multipart/form-data" className='form-box'>
       <h2>Signup</h2>
-      <form onSubmit={handleSubmit} encType="multipart/form-data">
-        <div>
+        <div className='input-box'>
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -83,7 +75,7 @@ const Signin = () => {
             required
           />
         </div>
-        <div>
+        <div className='input-box'>
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -94,7 +86,7 @@ const Signin = () => {
             required
           />
         </div>
-        <div>
+        <div className='input-box'>
           <label htmlFor="phone">Phone</label>
           <input
             type="text"
@@ -105,7 +97,7 @@ const Signin = () => {
             required
           />
         </div>
-        <div>
+        <div className='input-box'>
           <label htmlFor="work">Work</label>
           <input
             type="text"
@@ -116,7 +108,7 @@ const Signin = () => {
             required
           />
         </div>
-        <div>
+        <div className='input-box'>
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -127,7 +119,7 @@ const Signin = () => {
             required
           />
         </div>
-        <div>
+        <div className='input-box'>
           <label htmlFor="cpassword">Confirm Password</label>
           <input
             type="password"
@@ -138,9 +130,10 @@ const Signin = () => {
             required
           />
         </div>
-        <div>
+        <div className='input-box'>
           <label htmlFor="image">Image</label>
-          <input
+          <div className='choose-image'>
+          <input  
             type="file"
             id="image"
             name="image"
@@ -148,11 +141,13 @@ const Signin = () => {
             onChange={handleChange}
             required
           />
+         </div>
         </div>
+        <div className='btn'>
         <button type="submit">Register</button>
-      
-       
+        </div>
       </form>
+    </div>
     </div>
   );
 };
