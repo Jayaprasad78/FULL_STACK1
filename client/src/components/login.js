@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate,Link } from 'react-router-dom';
+import '../assets/styles/login.css';
+
 const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -41,10 +43,12 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Signin</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className='body-container'>
+    <div className='signup-container'>
+     
+      <form onSubmit={handleSubmit} className='form-box'>
+      <h2>Login</h2>
+        <div className='input-box'>
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -55,7 +59,7 @@ const Login = () => {
             required
           />
         </div>
-        <div>
+        <div className='input-box'>
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -66,13 +70,14 @@ const Login = () => {
             required
           />
         </div>
-       <div>
-      <button type="submit">Signin</button>
-      <Link className="nav-link" to="/forgot-pass">
-        Forgot Password
+        <Link className="forget-pass" to="/forgot-pass">
+        Forgot your password?.
       </Link>
-    </div>
+        <div className='btn'>
+        <button type="submit">click to login</button>
+        </div>
       </form>
+    </div>
     </div>
   );
 };
