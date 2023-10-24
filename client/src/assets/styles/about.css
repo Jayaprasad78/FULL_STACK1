@@ -1,0 +1,88 @@
+
+.about-container
+{
+    position: relative;;
+    background:url(../images/abstract-textured-backgound_1258-30436.jpg) ;
+}
+.about-header
+{
+    padding-top: 30px;
+    color: red;
+    margin-left: 620px;
+}
+.about-img
+{
+    
+    padding-top: 30px;
+   margin-left: 620px;
+}
+.image {
+    width: 200px;
+    height: 200px;
+  }
+.about-name
+{
+    padding-top: 10px;
+    position: relative;
+    color: rgb(210, 203, 203);
+    margin-left: 620px;
+    text-decoration: solid ;
+    font-size: 35px;
+}
+.about-work h2
+{
+    position: relative;
+    color: rgb(199, 199, 191);
+    font-size:35px;
+    margin-top: 14px;
+   
+}
+.about-work
+{
+    position: relative;
+    color: red;
+    margin-left: 550px;
+    display: flex;
+    flex-direction: row;
+    font-size:40px;
+    margin-bottom: 18px;
+}
+
+.about-phonenumber h2
+{
+    margin-left: 1000px;
+    position: absolute;
+    color: rgb(213, 205, 201);
+    font-size:30px;
+    margin-top: 10px;
+
+}
+.about-phonenumber p
+{
+
+    position: absolute;
+    color: rgb(3, 198, 81);
+    margin-left: 1110px;
+    display: flex;
+    flex-direction: row;
+    font-size:30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.about-email h2
+{
+    color: rgb(225, 219, 216);
+    font-size:30px;
+    margin-top: 4px;
+
+}
+.about-email 
+{
+    color: rgb(3, 198, 81);
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size:30px;
+    margin-bottom: 25px;
+}
