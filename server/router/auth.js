@@ -7,7 +7,7 @@ const secretKey = 'jayaprasad1234drtyvdflmlsfficientabcdefghijklmn';
 const multer = require('multer');
 const crypto = require('crypto');
 const cors = require('cors');
-
+const sharp = require('sharp');
 router.use(cors());
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
@@ -31,7 +31,7 @@ const handleImageUpload = upload.single('image');
 
 
 // Define the signup route
-router.post('/signup',  handleImageUpload,  async (req, res) => {
+router.post('/signup',   upload.single('image'),  async (req, res) => {
   try {
     const { name, email, phone, work, password, cpassword } = req.body;
 
@@ -58,14 +58,20 @@ router.post('/signup',  handleImageUpload,  async (req, res) => {
       work,
       password,
       cpassword,
-      image: req.file
-        ? {
-            data: req.file.buffer,
-            contentType: req.file.mimetype,
-          }
-        : undefined,
+     
     });
 
+    if (req.file) {
+      // Resize the image to the desired width and height
+      const resizedImageBuffer = await sharp(req.file.buffer)
+        .resize(180, 180) // Set your desired dimensions
+        .toBuffer();
+
+      newUser.image = {
+        data: resizedImageBuffer,
+        contentType: req.file.mimetype,
+      };
+    }
     // Save the user to the database
     await newUser.save();
 
@@ -177,9 +183,9 @@ router.post('/about', verifyToken, async (req,res) => {
 
     // Send the user's name as a response
     
-    const { work, phone, name, image } = user;
+    const { work, phone, name,email, image } = user;
    
-    res.json({ work: work, phone: phone,name: name,image: {
+    res.json({ work: work, phone: phone,name:name,email:email,image: {
       data: image.data.toString('base64'), // Convert image data to Base64
       contentType: image.contentType,
     }, });
