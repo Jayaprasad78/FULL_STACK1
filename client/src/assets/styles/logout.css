@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.body-container
+{
+    background-image:url('../images/abstract-textured-backgound_1258-30436.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 90.9vh;
+    width:100%;
+    
+}
+.log{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+   
+}
+.log h2{
+    color:white !important;
+    text-align: center;  
+    margin-top:150px;
+}

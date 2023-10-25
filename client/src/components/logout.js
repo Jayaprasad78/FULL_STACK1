@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../assets/styles/logout.css';
 
 const Logout = () => {
   const navigate = useNavigate();
@@ -32,9 +33,11 @@ const Logout = () => {
   }, [navigate]);
 
   return (
-    <div>
-      <h2>Logging Out...</h2>
+    <div className='body-container'>
+    <div className='log'>
+      <h2>You are now Logged Out...</h2>
       {/* You can optionally display a loading message or spinner here */}
+    </div>
     </div>
   );
 };
