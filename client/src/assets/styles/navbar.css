@@ -1,10 +1,31 @@
-.nav-item
-{
-
-    color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.navbar {
+   
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 .logo-img
 {
     height: 50px;
     width: 50px;
+}
+.container-fluid{
+    border:2px solid rgb(51, 51, 51);
+    border-radius: 10px;
+    background-color: rgba(227, 225, 225, 0.8);
+    font-size: 20px; 
+    box-shadow: 0px 0px 30px 0px white;
+}
+.container-fluid ul li{
+ margin-left: 20px;
+ transition: all ease-in-out;
+}
+.container-fluid ul li :hover{
+    transform: scale(1.2);
+    color:rgb(4, 63, 97) !important;
 }

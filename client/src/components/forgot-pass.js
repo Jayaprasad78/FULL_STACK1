@@ -36,7 +36,7 @@ function ForgotPassword() {
         <div className="btn">
           {!emailSent ? (
             <button type="button" onClick={handleSendResetEmail}>
-              Send Reset Password Email
+              Send Email
             </button>
           ) : (
             <p>Reset email sent! Check your inbox.</p>
