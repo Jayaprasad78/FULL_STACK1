@@ -25,21 +25,28 @@ function ForgotPassword() {
   };
 
   return (
-    <div>
-      <h2>Forgot Password</h2>
-      <div>
-        <label>Email:</label>
-        <input type="email" value={email} onChange={handleEmailChange} required />
+    <div className="body-container">
+    <div className="signup-container">
+      <div className="form-box">
+        <h2>Forgot Password</h2>
+        <div className="input-box">
+          <label>Email:</label>
+          <input type="email" value={email} onChange={handleEmailChange} required placeholder="Enter your email" />
+        </div>
+        <div className="btn">
+          {!emailSent ? (
+            <button type="button" onClick={handleSendResetEmail}>
+              Send Reset Password Email
+            </button>
+          ) : (
+            <p>Reset email sent! Check your inbox.</p>
+          )}
+        </div>
+        <a className="forget-pass" href="#">Forgot your password?</a>
       </div>
-      {!emailSent ? (
-        <button type="button" onClick={handleSendResetEmail}>
-          Send Reset Password Email
-        </button>
-      ) : (
-        <p>Reset email sent! Check your inbox.</p>
-      )}
     </div>
-  );
+  </div>
+);
 }
 
 export default ForgotPassword;
