@@ -10,16 +10,17 @@
     color: red;
     margin-left: 620px;
 }
-.about-img
+.about-div
+{
+    margin-left: 590px;
+}
+.about-image
 {
     
-    padding-top: 30px;
-   margin-left: 620px;
+    width:180px;
+    height:180px;
 }
-.image {
-    width: 200px;
-    height: 200px;
-  }
+
 .about-name
 {
     padding-top: 10px;
@@ -29,6 +30,12 @@
     text-decoration: solid ;
     font-size: 35px;
 }
+
+.about-name p
+{
+    color: red;
+}
+
 .about-work h2
 {
     position: relative;

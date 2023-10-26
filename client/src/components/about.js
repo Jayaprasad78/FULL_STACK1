@@ -36,20 +36,14 @@ function About() {
       </div>
       
     
-    <div className='about-img'>
-      {/* <img className='image' src={img} alt="image" />*/}
-      {userData.image && (
-          <img
-            src={`data:${userData.image.contentType};base64,${userData.image.data}`}
-            alt="User's Profile"
-          />
-        )}
+    <div className='about-div'>
+      <img className='about-image' src={img} alt="image" />
+     
     </div>
       
 
         <div className='about-name'>
-        {/* <p>Jayaprasad B</p>*/}
-       <p>{userData.name}</p>
+       <p>Jayaprasad B</p>
         </div>
         
 
@@ -58,27 +52,23 @@ function About() {
      
         <div className='about-phonenumber'>
         <h2>Number:</h2>
-       {/* <p>&nbsp;+91&nbsp;9632119392</p>*/}
-         <p>{userData.phone}</p>
+       <p>&nbsp;+91&nbsp;9632119392</p>
         </div>
 
         
         <div className='about-email'>
         <h2>email:</h2>
-       {/*   <p>&nbsp;jayaprasadb718@gmail.com</p>*/}
-       <p>{userData.email}</p>
+          <p>&nbsp;jayaprasadb718@gmail.com</p>
+       
         </div>
        
         <div className='about-work'>
         <h2>work:</h2>
-        {/*  <p>&nbsp;&nbsp;software engineer</p>*/}
-       <p>{userData.work}</p>
+         <p>&nbsp;&nbsp;software engineer</p>
+       
         </div>
 
-        <div className='space'>
-           <h2>&nbsp;</h2>
-
-        </div>
+        
 
 
      
