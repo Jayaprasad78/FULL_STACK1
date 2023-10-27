@@ -32,7 +32,7 @@ function Home() {
       <div className='Home'>
         <h2 className='home-content'>WELCOME <span className='user-name'> {userData.name} </span> </h2>
        
-        <div className='image'>
+        <div className='home-image'>
           <img src={imge}></img>
         </div>
         </div>

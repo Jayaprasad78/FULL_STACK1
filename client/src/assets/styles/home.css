@@ -45,12 +45,8 @@
       transform: rotateY(360deg) 
     }
   }
-.image{
-   width:500px !important;
-   height: 500px !important;
-    margin-top: 20px;
-}
-.image img{
+
+.home-image img{
     width:600px;
     height:600px;
    
