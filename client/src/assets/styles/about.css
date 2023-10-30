@@ -81,11 +81,13 @@ box-shadow: 0px 0px 25px 0px grey;
 border-radius: 12px;
 padding:4px;
 text-align: center;
+background-color: grey;
+color:black !important;
 
 }
 .about-section p:hover{
-    background-color: grey;
-    color:black;
+    background-color: bisque;
+   
 }
 .about-section h1:hover{
     color:turquoise;
