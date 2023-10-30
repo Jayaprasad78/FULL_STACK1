@@ -1,95 +1,93 @@
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.body-container
+{
+    background-image:url('../images/abstract-textured-backgound_1258-30436.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 90.9vh;
+    width:100%;
+    
+}
+
 .about-container
 {
-    position: relative;;
-    background:url(../images/abstract-textured-backgound_1258-30436.jpg) ;
+    
+    position: fixed;
+    padding: 20px; 
+    box-sizing: border-box;
+    border: 1px solid white;
+    width:70%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px 0px grey;
+    left:14%;
+    top:16%;    
 }
-.about-header
+
+.about-header h1
 {
-    padding-top: 30px;
-    color: red;
-    margin-left: 620px;
+    color:white;
+    text-align: center;
+    
 }
-.about-div
+.about-img
 {
-    margin-left: 590px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.about-img p
+{
+    color: white;
+    margin-left:20px;
+    
+    text-align: center !important;
 }
 .about-image
 {
-    
+    border-radius: 10px;
     width:180px;
-    height:180px;
+    height:170px;
 }
-
-.about-name
-{
-    padding-top: 10px;
+.about-section{
+    color:white;
+    box-sizing: border-box;
+    border: 1px solid white;
     position: relative;
-    color: rgb(210, 203, 203);
-    margin-left: 620px;
-    text-decoration: solid ;
-    font-size: 35px;
-}
-
-.about-name p
-{
-    color: red;
-}
-
-.about-work h2
-{
-    position: relative;
-    color: rgb(199, 199, 191);
-    font-size:35px;
-    margin-top: 14px;
-   
-}
-.about-work
-{
-    position: relative;
-    color: red;
-    margin-left: 550px;
     display: flex;
-    flex-direction: row;
-    font-size:40px;
-    margin-bottom: 18px;
-}
-
-.about-phonenumber h2
-{
-    margin-left: 1000px;
-    position: absolute;
-    color: rgb(213, 205, 201);
-    font-size:30px;
-    margin-top: 10px;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px 0px grey;
+    backdrop-filter: blur(15px);
+    width: 50%;
+    left:40%;
+    top:-20%;
 
 }
-.about-phonenumber p
-{
-
-    position: absolute;
-    color: rgb(3, 198, 81);
-    margin-left: 1110px;
-    display: flex;
-    flex-direction: row;
-    font-size:30px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.about-email h2
-{
-    color: rgb(225, 219, 216);
-    font-size:30px;
-    margin-top: 4px;
+ 
+.about-section p{
+font-size: 17px;
+margin-left: 40px;
+border:1px solid white;
+width:80%;
+box-shadow: 0px 0px 25px 0px grey;
+border-radius: 12px;
+padding:4px;
+text-align: center;
 
 }
-.about-email 
-{
-    color: rgb(3, 198, 81);
-    margin-left: 10px;
-    display: flex;
-    flex-direction: row;
-    font-size:30px;
-    margin-bottom: 25px;
+.about-section p:hover{
+    background-color: grey;
+    color:black;
+}
+.about-section h1:hover{
+    color:turquoise;
+    
 }

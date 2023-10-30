@@ -28,7 +28,7 @@ function About() {
   }, []);
 
   return (
-
+    <div className='body-container'>
     <div className='about-container'>
 
       <div className='about-header'>
@@ -36,41 +36,28 @@ function About() {
       </div>
       
     
-    <div className='about-div'>
+    <div className='about-img'>
       <img className='about-image' src={img} alt="image" />
+      <p>We're here to assist you.We believe that authentication should be hassle-free.Our user interface is designed with simplicity in mind, ensuring that even first-time users can navigate our platform with ease.Our support team is ready to answer your questions and resolve any issues you may encounter.</p>
      
     </div>
       
 
-        <div className='about-name'>
-       <p>Jayaprasad B</p>
-        </div>
+        <div className='about-section'>
+       <h1>Jayaprasad B</h1>
+
+        <p>Number:<span>&nbsp;+91&nbsp;9632119392</span></p>
+       
+        
+        <p>Email:<span>&nbsp;jayaprasadb718@gmail.com</span></p>
+         
+       
+        <p>work:<span>&nbsp;&nbsp;Software Engineer</span></p>
         
 
-       
-      
-     
-        <div className='about-phonenumber'>
-        <h2>Number:</h2>
-       <p>&nbsp;+91&nbsp;9632119392</p>
-        </div>
-
         
-        <div className='about-email'>
-        <h2>email:</h2>
-          <p>&nbsp;jayaprasadb718@gmail.com</p>
-       
+     </div>
         </div>
-       
-        <div className='about-work'>
-        <h2>work:</h2>
-         <p>&nbsp;&nbsp;software engineer</p>
-       
-        </div>
-
-        
-
-
      
     </div>
   );
