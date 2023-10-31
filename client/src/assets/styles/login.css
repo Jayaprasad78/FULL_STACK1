@@ -1,47 +1,48 @@
-*{
-    margin:0;
-    padding:0;
+/* login.css */
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.body-container
-{
-    background-image:url('../images/abstract-textured-backgound_1258-30436.jpg');
+
+.body-container {
+    background-image: url('../images/abstract-textured-backgound_1258-30436.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 90.9vh;
-    width:100%;
-    
+    width: 100%;
 }
 
-.signup-container {
+.signin-container {
     width: 50%;
     position: fixed;
+    z-index: 1; /* Set a higher z-index value */
     box-sizing: border-box;
-    height: 550px;
     border: 3px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0px 0px 25px 0px grey;
     border-radius: 20px;
     backdrop-filter: blur(15px);
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 16%;
-    left: 25%;
-    
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    overflow: auto; /* Add this line to handle overflow */
 }
 
-.form-box {
-    width: 100%; 
+.formbox {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.form-box h2 {
+.formbox h2 {
     color: #fff;
     text-align: center;
     font-size: 35px;
@@ -50,22 +51,22 @@
     text-decoration: underline;
 }
 
-.input-box {
+.inputbox {
     display: flex;
     align-items: center;
     margin: 5px 0;
-    width: 70%; 
+    width: 80%;
 }
 
-.form-box .input-box label {
+.formbox .inputbox label {
     color: #fff;
     font-size: 20px;
-    width: 100px; 
+    width: 100px;
     margin-right: 10px;
 }
 
-.form-box .input-box input {
-    flex: 1; 
+.formbox .inputbox input {
+    flex: 1;
     height: 40px;
     background: transparent;
     border-bottom: 1px solid #fff;
@@ -75,21 +76,15 @@
     padding: 5px;
     color: #fff;
     font-size: 16px;
-    width: 100%; 
+    width: 100%;
 }
 
 input::placeholder {
     color: #fff;
 }
-.choose-image{
-
-    outline: none !important;
-    border: none !important;
-    
-}
 
 .btn {
-    margin-top: 20px; 
+    margin-top: 20px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -98,7 +93,7 @@ input::placeholder {
     background-color: #011d3c;
     color: #fff;
     padding: 10px 5px;
-    width:150px;
+    width: 150px;
     border: none;
     border-radius: 7px;
     cursor: pointer;
@@ -111,17 +106,75 @@ input::placeholder {
     background-color: #064d9f;
     transform: scale(1.1);
 }
-.forget-pass{
-    
-    color:white;
-    font-size:20px;
-    margin-left: 340px;
-    margin-top:20px;
+
+.forget-pass {
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
-.forget-pass:hover{
-    color:aqua;
-    transform: scale(1.1);
 
+.forget-pass:hover {
+    color: aqua;
+    transform: scale(1.1);
+}
+
+/* Media Query for screens smaller than 680px */
+@media (max-width: 680px) {
+    .signin-container {
+        width: 92%;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .formbox .inputbox label {
+        font-size: 20px;
+        width: 80px;
+    }
+
+    .formbox .inputbox input {
+        font-size: 20px;
+    }
+
+    .btn button {
+        font-size: 20px;
+        width: 100px;
+    }
+
+    .forget-pass {
+        font-size: 20px;
+    }
+}
+
+
+
+/* Media Query for screens smaller than 450px */
+@media (max-width: 450px) {
+    .signin-container {
+        width: 97%;
+        left: 2%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .formbox .inputbox label {
+        font-size: 15px;
+        width: 80px;
+    }
+
+    .formbox .inputbox input {
+        font-size: 15px;
+    }
+
+    .btn button {
+        font-size: 17px;
+        width: 100px;
+    }
+
+    .forget-pass {
+        font-size: 16px;
+    }
 }

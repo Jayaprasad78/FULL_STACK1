@@ -20,12 +20,13 @@
     background-color: rgba(227, 225, 225, 0.8);
     font-size: 20px; 
     box-shadow: 0px 0px 30px 0px white;
+  
 }
 .container-fluid ul li{
  margin-left: 20px;
- transition: all ease-in-out;
+ transition: all 1s ease-in-out;
 }
 .container-fluid ul li :hover{
-    transform: scale(1.2);
+    transform: scale(1.0);
     color:rgb(4, 63, 97) !important;
 }

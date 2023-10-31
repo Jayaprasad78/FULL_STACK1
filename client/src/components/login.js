@@ -45,11 +45,11 @@ const Login = () => {
 
   return (
     <div className='body-container'>
-    <div className='signup-container'>
+    <div className='signin-container'>
      
-      <form onSubmit={handleSubmit} className='form-box'>
+      <form onSubmit={handleSubmit} className='formbox'>
       <h2>Login</h2>
-        <div className='input-box'>
+        <div className='inputbox'>
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -60,7 +60,7 @@ const Login = () => {
             required
           />
         </div>
-        <div className='input-box'>
+        <div className='inputbox'>
           <label htmlFor="password">Password</label>
           <input
             type="password"
