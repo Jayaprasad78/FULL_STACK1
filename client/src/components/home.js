@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import imge from '../assets/images/5b44330a05b1ce09edcc052e_home_designer.png';
+
+import imge from '../assets/images/home.png';
 
 function Home() {
   const [userData, setUserData] = useState({});

@@ -37,22 +37,30 @@ function About() {
       
     
     <div className='about-img'>
-      <img className='about-image' src={img} alt="image" />
+     {/* <img className='about-image' src={img} alt="image" />*/}
+    {userData.image && (
+          <img
+            src={`data:${userData.image.contentType};base64,${userData.image.data}`}
+            alt="User's Profile"
+          />
+        )}
+    
       <p>We're here to assist you.We believe that authentication should be hassle-free.Our user interface is designed with simplicity in mind, ensuring that even first-time users can navigate our platform with ease.Our support team is ready to answer your questions and resolve any issues you may encounter.</p>
      
     </div>
       
 
         <div className='about-section'>
-       <h1>Jayaprasad B</h1>
+      {/* <h1>Jayaprasad B</h1>*/}
+      <h1>{userData.name}</h1>
 
-        <p>Number:<span>&nbsp;+91&nbsp;9632119392</span></p>
+        <p>Number:<span>&nbsp;+91&nbsp;{userData.phone}</span></p>
        
         
-        <p>Email:<span>&nbsp;jayaprasadb718@gmail.com</span></p>
+        <p>Email:<span>&nbsp;{userData.email}</span></p>
          
        
-        <p>work:<span>&nbsp;&nbsp;Software Engineer</span></p>
+        <p>work:<span>&nbsp;&nbsp;{userData.work}</span></p>
         
 
         
