@@ -44,7 +44,7 @@ const Login = () => {
   };
 
   return (
-    <div className='body-container'>
+    <div className='bdy-container'>
     <div className='signin-container'>
      
       <form onSubmit={handleSubmit} className='formbox'>

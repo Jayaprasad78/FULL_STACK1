@@ -57,7 +57,7 @@ const Signin = () => {
   };
 
   return (
-    <div className='body-container'>
+    <div className='b-container'>
    
        
     <div className='signup-container'> 

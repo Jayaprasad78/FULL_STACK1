@@ -86,6 +86,7 @@
 }
 .about-section h1 {
     color: bisque;
+    margin-bottom: -2px;
 }
 .about-section h1:hover {
     color: turquoise;

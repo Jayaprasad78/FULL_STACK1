@@ -37,7 +37,7 @@ function About() {
       
     
     <div className='about-img'>
-     {/* <img className='about-image' src={img} alt="image" />*/}
+     {<img className='about-image' src={img} alt="image" />}
     {userData.image && (
           <img
             src={`data:${userData.image.contentType};base64,${userData.image.data}`}
@@ -51,7 +51,7 @@ function About() {
       
 
         <div className='about-section'>
-      {/* <h1>Jayaprasad B</h1>*/}
+      {<h1>Jayaprasad B</h1>}
       <h1>{userData.name}</h1>
 
         <p>Number:<span>&nbsp;+91&nbsp;{userData.phone}</span></p>

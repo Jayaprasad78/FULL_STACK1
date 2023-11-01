@@ -25,11 +25,11 @@ function ForgotPassword() {
   };
 
   return (
-    <div className="body-container">
-    <div className="signup-container">
-      <div className="form-box">
+    <div className="bdy-container">
+    <div className="forgetpass-container">
+      <div className="formbox">
         <h2>Forgot Password</h2>
-        <div className="input-box">
+        <div className="inputbox">
           <label>Email:</label>
           <input type="email" value={email} onChange={handleEmailChange} required placeholder="Enter your email" />
         </div>
